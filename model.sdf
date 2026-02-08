@@ -6,7 +6,6 @@
       <static>true</static>
       <pose>0 0 0 0 0 0</pose>
       <link name="link">
-
         <!-- Collision: keep plane (fast and stable) -->
         <collision name="collision">
           <geometry>
@@ -16,7 +15,6 @@
             </plane>
           </geometry>
         </collision>
-
         <!-- Visual: use a thin box so texture works, no <scale> warning -->
         <visual name="visual">
           <!-- Lift slightly to avoid z-fighting with the collision plane -->
@@ -26,7 +24,6 @@
               <size>60 10 0.01</size>
             </box>
           </geometry>
-
           <material>
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
@@ -38,7 +35,6 @@
             </pbr>
           </material>
         </visual>
-
       </link>
     </model>
     <model name="zone_takeoff_landing">
@@ -173,8 +169,15 @@
             </mesh>
           </geometry>
           <surface>
-            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
-            <bounce><restitution_coefficient>0.05</restitution_coefficient></bounce>
+            <friction>
+              <ode>
+                <mu>1.0</mu>
+                <mu2>1.0</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.05</restitution_coefficient>
+            </bounce>
           </surface>
         </collision>
         <visual name="visual">
@@ -203,8 +206,15 @@
             </mesh>
           </geometry>
           <surface>
-            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
-            <bounce><restitution_coefficient>0.05</restitution_coefficient></bounce>
+            <friction>
+              <ode>
+                <mu>1.0</mu>
+                <mu2>1.0</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.05</restitution_coefficient>
+            </bounce>
           </surface>
         </collision>
         <visual name="visual">
@@ -233,8 +243,15 @@
             </mesh>
           </geometry>
           <surface>
-            <friction><ode><mu>1.0</mu><mu2>1.0</mu2></ode></friction>
-            <bounce><restitution_coefficient>0.05</restitution_coefficient></bounce>
+            <friction>
+              <ode>
+                <mu>1.0</mu>
+                <mu2>1.0</mu2>
+              </ode>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0.05</restitution_coefficient>
+            </bounce>
           </surface>
         </collision>
         <visual name="visual">
@@ -253,21 +270,21 @@
     </model>
     <model name="recon_cyl_1">
       <static>true</static>
-      <pose>53.0 -1.6 0.075 0 0 0</pose>
+      <pose>53.0 -1.6 0.0675 0 0 0</pose>
       <link name="link">
         <collision name="collision">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
           <material>
@@ -275,14 +292,13 @@
             <diffuse>1 1 1 1</diffuse>
           </material>
         </visual>
-
-        <!-- Hazard label (12cm x 12cm) as a thin red plate -->
+        <!-- Hazard label (7.2cm x 7.2cm) as a thin red plate -->
         <visual name="hazard_label">
           <!-- place on +Y side of cylinder -->
-          <pose>0 0 0.08 1.5707963 0 0</pose>
+          <pose>0 0 0.072 1.5707963 0 0</pose>
           <geometry>
             <box>
-              <size>0.12 0.01 0.12</size>
+              <size>0.501 0.054 0.324</size>
             </box>
           </geometry>
           <material>
@@ -304,21 +320,21 @@
     </model>
     <model name="recon_cyl_2">
       <static>true</static>
-      <pose>54.6 1.4 0.075 0 0 0</pose>
+      <pose>54.6 1.4 0.0675 0 0 0</pose>
       <link name="link">
         <collision name="collision">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
           <material>
@@ -330,21 +346,21 @@
     </model>
     <model name="recon_cyl_3">
       <static>true</static>
-      <pose>56.0 -0.3 0.075 0 0 0</pose>
+      <pose>56.0 -0.3 0.0675 0 0 0</pose>
       <link name="link">
         <collision name="collision">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
           <material>
@@ -352,15 +368,14 @@
             <diffuse>1 1 1 1</diffuse>
           </material>
         </visual>
-
         <visual name="hazard_label">
-          <pose>0 0 0.08 1.5707963 0 0</pose>
+          <pose>0 0 0.072 1.5707963 0 0</pose>
           <geometry>
             <box>
-              <size>0.12 0.01 0.12</size>
+              <size>0.535 0.054 0.324</size>
             </box>
           </geometry>
-           <material>
+          <material>
             <!-- 不要染色 -->
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
@@ -379,21 +394,21 @@
     </model>
     <model name="recon_cyl_4">
       <static>true</static>
-      <pose>57.2 0.9 0.075 0 0 0</pose>
+      <pose>57.2 0.9 0.0675 0 0 0</pose>
       <link name="link">
         <collision name="collision">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
           <material>
@@ -401,15 +416,14 @@
             <diffuse>1 1 1 1</diffuse>
           </material>
         </visual>
-
         <visual name="hazard_label">
-          <pose>0 0 0.08 1.5707963 0 0</pose>
+          <pose>0 0 0.072 1.5707963 0 0</pose>
           <geometry>
             <box>
-              <size>0.12 0.01 0.12</size>
+              <size>0.511 0.054 0.324</size>
             </box>
           </geometry>
-           <material>
+          <material>
             <!-- 不要染色 -->
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
@@ -428,21 +442,21 @@
     </model>
     <model name="recon_cyl_5">
       <static>true</static>
-      <pose>58.4 -1.0 0.075 0 0 0</pose>
+      <pose>58.4 -1.0 0.0675 0 0 0</pose>
       <link name="link">
         <collision name="collision">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
         </collision>
         <visual name="visual">
           <geometry>
             <cylinder>
-              <radius>0.10</radius>
-              <length>0.15</length>
+              <radius>0.36</radius>
+              <length>0.135</length>
             </cylinder>
           </geometry>
           <material>
